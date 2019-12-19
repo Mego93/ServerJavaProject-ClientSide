@@ -22,7 +22,7 @@ public class AppliBiblioRetour {
 
 			// Informe l'utilisateur de la connexion
 			System.out
-					.println("Connecté au serveur de réservation " + socket.getInetAddress() + ":" + socket.getPort());
+					.println("Connecté au serveur de retour " + socket.getInetAddress() + ":" + socket.getPort());
 
 			String line;
 			do {// réception et affichage de la question provenant du service

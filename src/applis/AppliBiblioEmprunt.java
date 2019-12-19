@@ -21,7 +21,7 @@ public static void main(String[] args) throws IOException {
 		PrintWriter sout = new PrintWriter (socket.getOutputStream ( ), true);
 		
 		// Informe l'utilisateur de la connexion
-		System.out.println("Connecté au serveur de réservation " + socket.getInetAddress() + ":"+ socket.getPort());
+		System.out.println("Connecté au serveur d'emprunt " + socket.getInetAddress() + ":"+ socket.getPort());
 		
 		String line;
 		do {// réception et affichage de la question provenant du service
