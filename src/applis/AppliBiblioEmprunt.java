@@ -36,26 +36,27 @@ public class AppliBiblioEmprunt {
 				line = sin.readLine();
 				if (line == null)
 					break; // fermeture par le service
-
+				
+				// On décode le message reçu (les #n décodés en \n)
 				System.out.println(Decodage.decoder(line));
 				System.out.print("=>");
-
+				
 				line = clavier.readLine();
 				if (line.equals(""))
 					break; // fermeture par le client
 				sout.println(line);
+				
 			} while (true);
 			socket.close();
 		} catch (IOException e) {
 			System.err.println("Fin du service");
-		}
-
+		}	
 		// Refermer dans tous les cas la socket
 		try {
 			if (socket != null)
 				socket.close();
-		} catch (IOException e2) {
-		}
+		} catch (IOException e2) {}
 	}
 
 }
+
