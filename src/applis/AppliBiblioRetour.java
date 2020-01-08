@@ -11,6 +11,8 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+import codage.Decodage;
+
 public class AppliBiblioRetour {
 	private static final int PORT = 2700;
 	private static final String HOST = "127.0.0.1";
@@ -35,7 +37,7 @@ public class AppliBiblioRetour {
 				if (line == null)
 					break; // fermeture par le service
 
-				System.out.println(line);
+				System.out.println(Decodage.decoder(line));
 				System.out.print("=>");
 
 				line = clavier.readLine();
